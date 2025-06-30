@@ -1,0 +1,28 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+//
+// Example:
+[
+  {
+    "label": "Cargo run",
+    "command": "cargo run",
+    //"args": [],
+    // Env overrides for the command, will be appended to the terminal's environment from the settings.
+    "env": { "RUST_LOG": "none,uitest=trace" },
+
+    "use_new_terminal": false,
+
+    "allow_concurrent_runs": false,
+
+    "reveal": "always",
+
+    "reveal_target": "dock",
+
+    "hide": "never",
+
+    "shell": {
+      "program": "pwsh"
+    },
+    // Represents the tags for inline runnable indicators, or spawning multiple tasks at once.
+    "tags": []
+  }
+]
