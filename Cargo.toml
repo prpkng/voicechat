@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+tokio = { version = "1.45.1", features = ["rt-multi-thread"] }
 anyhow = "1.0.98"
 clap = { version = "4.5.40", features = ["derive"] }
 data-encoding = "2.9.0"
@@ -12,10 +13,15 @@ egui = "0.31.1"
 egui_extras = "0.31.1"
 env_logger = "0.11.8"
 futures-lite = "2.6.0"
-iroh = "0.90.0"
+libp2p = { version = "0.56.0", features = [
+    "noise",
+    "ping",
+    "tcp",
+    "tokio",
+    "yamux",
+] }
 log = "0.4.27"
 rand = "0.8"
 serde = { version = "1.0.219", features = ["derive"] }
 serde_json = "1.0.140"
 serde_with = "3.14.0"
-tokio = { version = "1.45.1", features = ["rt"] }
